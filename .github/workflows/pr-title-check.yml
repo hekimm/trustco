@@ -1,0 +1,17 @@
+name: Pull Request Title Check
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR Title Format
+        run: |
+          if [[ ! "${{ github.event.pull_request.title }}" =~ ^\[RLP-[0-9]+\] ]]; then
+            echo "ERROR: Pull request title must follow the format '[RLP-<ticket-number>] - <description>'"
+            exit 1
+          fi
