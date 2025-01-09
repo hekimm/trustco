@@ -1,0 +1,66 @@
+body {
+  background-color: #f2f5f6;
+}
+#container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 98px;
+}
+
+.header .brand .brand-logo {
+  width: 58.5px;
+  height: 24px;
+}
+
+.header .nav-links nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.header .nav-links nav ul li {
+  list-style: none;
+}
+.header .nav-links nav ul li a {
+  text-decoration: none;
+  color: #12141d;
+  font-family: "Lato", serif;
+  font-weight: 800;
+}
+.header .nav-links nav ul li:first-child a {
+  color: #043a53;
+}
+.header .auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+.header .auth-buttons .login {
+  background-color: #fff;
+  color: #12141d;
+}
+.header .auth-buttons .login,
+.header .auth-buttons .sign-up {
+  border: none;
+  width: 92px;
+  height: 50px;
+  border-radius: 42px;
+  font-family: "Lato", serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.header .auth-buttons .sign-up {
+  background-color: #043a53;
+  color: #fff;
+}
+
+
+
+
+
