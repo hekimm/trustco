@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Sabit yükseklik yalnızca geniş ekranlar için */
   height: 98px;
 }
 
@@ -26,23 +27,28 @@ body {
 .header .nav-links nav ul li {
   list-style: none;
 }
+
 .header .nav-links nav ul li a {
   text-decoration: none;
   color: #12141d;
   font-family: "Lato", serif;
   font-weight: 800;
 }
+
 .header .nav-links nav ul li:first-child a {
   color: #043a53;
 }
+
 .header .auth-buttons {
   display: flex;
   gap: 10px;
 }
+
 .header .auth-buttons .login {
   background-color: #fff;
   color: #12141d;
 }
+
 .header .auth-buttons .login,
 .header .auth-buttons .sign-up {
   border: none;
@@ -60,7 +66,117 @@ body {
   color: #fff;
 }
 
+/* Hamburger ile ilgili ayarlar */
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger-bars {
+  display: none;
+}
+
+.hamburger-bars .bar {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* Medya Sorguları */
+@media (max-width: 1024px) {
+  .header {
+    max-width: 1000px;
+    margin: 20px;
+  }
+  .header .auth-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header .auth-buttons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header yüksekliğini dinamik yap */
+  .header {
+    height: auto;
+    gap: 20px;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    
+  }
+  
+  .header .nav-links nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .header .brand {
+    align-self: flex-start;
+  }
+  
+  .header .hamburger-bars {
+    display: flex;
+    align-self: flex-end;
+    gap: 6px;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .header .hamburger-bars .bar {
+    width: 40px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #000;
+  }
+  
+  /* Menü ve auth butonlarını başlangıçta gizle ve animasyon ayarları yap */
+  .nav-links,
+  .auth-buttons {
+    max-height: 0;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    width: 100%;
+    /* İçeriğin genişliğini ayarlamak için gerekirse ek stil uygulanabilir */
+  }
+  
+  /* Hamburger -> X dönüşümleri */
+  .hamburger-toggle:checked + .hamburger-bars .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .hamburger-toggle:checked + .hamburger-bars .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-toggle:checked + .hamburger-bars .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* Checkbox işaretlendiğinde menü ve auth butonlarını göster */
+  .hamburger-toggle:checked ~ .nav-links,
+  .hamburger-toggle:checked ~ .auth-buttons {
+    max-height: 500px; /* İçeriğe bağlı olarak yeterince büyük bir değer */
+    opacity: 1;
+  }
+}
 
 
+@media (max-width: 480px) {
+  /* Styles for max-width: 480px */
+}
 
-
+@media (max-width: 320px) {
+  /* Styles for max-width: 320px */
+}
