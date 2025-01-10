@@ -173,10 +173,105 @@ body {
 }
 
 
-@media (max-width: 480px) {
-  /* Styles for max-width: 480px */
+.hero {
+  font-family: "Lato", serif;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 100px 120px;
+  max-height: 340px;
+  flex-wrap: wrap;
+}
+.hero .hero-center{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  
+  
 }
 
-@media (max-width: 320px) {
-  /* Styles for max-width: 320px */
+.hero .hero-center .hero-title{
+  
+  font-weight: 800;
 }
+.hero .hero-center .hero-text{
+font-size: 20px;
+color:#12141D;
+}
+.hero .hero-center .hero-cta-buttons-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:60px;
+  max-width: 409.18px;
+  width: 100%;
+
+ 
+}
+.hero .hero-center .hero-cta-buttons-area .play-button{
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #043A53;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-center .hero-cta-buttons-area .get-started {
+  font-family: "Lato", serif;
+  font-size: 18px;
+color:#fff ;
+  width:141px ;
+  height: 60px;
+  border-radius: 55px;
+  border:none;
+  background-color: #043A53;
+  
+}
+.hero .hero-center .hero-cta-buttons-area  .hero-cta-right{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero-center .hero-cta-buttons-area  .hero-cta-right .cta-text{
+  font-size:14px;
+}
+.hero .hero-center, .hero .hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* İçerik yerleşimini düzenler */
+
+}
+
+.hero .hero-center, .hero .hero-left img, .hero .hero-center, .hero .hero-right img{
+  flex: 1 1 200px;
+
+  padding: 20px;
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+  .hero {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .hero .hero-center{
+    order:-1;
+  }
+  .hero .hero-center .hero-cta-buttons-area{
+    flex-direction: column;
+    gap:30px;
+  }
+}
+
