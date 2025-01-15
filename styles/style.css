@@ -513,7 +513,7 @@ display: flex;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-radius: 15px; /* Köşelerin yuvarlatılması */
+  border-radius: 15px; 
 }
 .benefit-image:nth-child(1) {
   width: 93.33px;
@@ -571,4 +571,60 @@ justify-items: center;
   
 }
 
+/* hekimcan/benefits-section end */
 
+/* hekimcan/numbers-section start */
+
+.numbers-section{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ width: 100%;
+ gap:20px;
+ margin: 0 auto;
+ font-family: "Lato", serif;
+
+
+}
+.numbers-section .number-card{
+  width: 25%;
+}
+.numbers-section .number-card .number-value{
+  font-size: 60px;
+  color: #043A53;
+ 
+}
+
+
+.numbers-section .number-card .number-description{
+  font-size: 24px;
+  color: #1E1E1E;
+}
+
+@media (max-width: 1024px){
+  .numbers-section{
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+  .numbers-section .number-card{
+    width: 40%;
+  }
+  .numbers-section .number-card .number-value{
+    font-size: 40px;
+
+   
+  }
+}
+@media (max-width: 320px){
+
+  .numbers-section .number-card{
+    width: 90%;
+
+  }
+  
+}
+
+/* hekimcan/numbers-section end */
