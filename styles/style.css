@@ -628,3 +628,149 @@ justify-items: center;
 }
 
 /* hekimcan/numbers-section end */
+
+
+/* hekimcan/meet-our-founder-section start */
+.meet-out-founder {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto; 
+  font-family: "Lato", serif;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px;
+  gap: 30px; 
+  background-color: #fff;
+}
+
+.meet-our-founder-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+  width: 50%;
+  gap:20px;
+}
+
+.meet-our-founder-text .text-title {
+  font-size: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+.meet-our-founder-text .text-paragraph {
+  font-size: 24px;
+  text-align: justify;
+  padding: 20px;
+}
+
+.meet-our-founder-image-wrapper {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+  width: 50%;
+}
+
+.meet-our-founder-image-wrapper img {
+  width: 100%;
+  height: auto; 
+  max-width: 711px; 
+  object-fit: cover; 
+}
+
+
+.meet-our-founder-btn{
+  background-color: #043A53;
+  color: #fff;
+  width: 336px;
+  border:none;
+  border-radius: 55px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-family: "Lato", serif;
+  cursor: pointer;
+
+}
+.meet-our-founder-btn img{
+  background-color: #366175;
+  border-radius: 50%;
+  padding: 8px;
+}
+.founder-name,.founder-job-title{
+align-self: flex-start;
+}
+
+.founder-name {
+  color:#12141D;
+}
+.founder-job-title{
+  color: #404040;
+}
+@media (max-width: 768px) {
+  .meet-out-founder {
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    gap: 20px;
+  }
+
+  .meet-our-founder-text {
+    width: 100%;
+    padding: 20px;
+    align-items: center; 
+  }
+
+  .meet-our-founder-text .text-title {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .meet-our-founder-text .text-paragraph {
+    font-size: 16px; 
+    text-align: center; 
+    padding: 10px;
+  }
+
+  .meet-our-founder-image-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .meet-our-founder-image-wrapper img {
+    width: 80%;
+    max-width: 332px; 
+    height: auto; 
+  }
+  .founder-name,.founder-job-title{
+    align-self: center;
+    }
+}
+
+@media (min-width: 1200px) {
+  .meet-out-founder {
+    max-width: 1200px; 
+    gap: 40px;
+  }
+
+  .meet-our-founder-text .text-title {
+    font-size: 60px;
+  }
+
+  .meet-our-founder-text .text-paragraph {
+    font-size: 24px;
+  }
+
+  .meet-our-founder-image-wrapper img {
+    max-width: 711px; 
+  }
+}
+
+
+/* hekimcan/meet-our-founder-section end */
