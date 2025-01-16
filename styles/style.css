@@ -163,6 +163,7 @@ body {
 
 /* hekimcan/header-end */
 
+
 /* hekimcan/hero-start */
 
 .hero {
@@ -774,3 +775,83 @@ align-self: flex-start;
 
 
 /* hekimcan/meet-our-founder-section end */
+
+.building-bridges{
+  display: flex;
+  font-family: "Lato", serif;
+
+}
+
+.building-bridges .building-bridges-image-wrapper{
+  display: flex;  
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+  width: 60%;
+}
+
+.building-bridges .building-bridges-image-wrapper img{
+  width: 100%;
+  height: auto; 
+  max-width: 702px; 
+  object-fit: cover; 
+}
+.building-bridges .building-bridges-text{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  width: 40%;
+  padding:20px;
+}
+.building-bridges .building-bridges-text .buildin-bridges-title{
+  font-size: 60px;
+  color: #12141D;
+  
+}
+.building-bridges .building-bridges-text .buildin-bridges-title span{
+ color: #92A7B0; 
+}
+
+.building-bridges-btn{
+  background-color: #043A53;
+  color: #fff;
+  width: 205px;
+  border:none;
+  border-radius: 55px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-family: "Lato", serif;
+  cursor: pointer;
+}
+.building-bridges-btn img{
+  background-color: #366175;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .building-bridges{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .building-bridges .building-bridges-image-wrapper{
+    width: 100%;
+    
+    
+  }
+  .building-bridges .building-bridges-text{
+   padding: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  .building-bridges .building-bridges-text .buildin-bridges-title{
+    font-size: 30px;
+    
+  }
+}
+
